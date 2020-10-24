@@ -17,7 +17,12 @@
 ## Uninstalling packages locally
 * breifly `npm uninstall <package-name>
   * to remove it from `package.json` run `npm uninstall --save <package-name>`
-## Installing packages globally
+## Installing global packages 
 * just run `npm install -g <package-name>`
-## Updating packages globally
+## Updating global packages 
 * for previously installed global packages run `npm update -g <package-name>`
+* To find all outdated global packages run `npm outdates -g --depth=0`
+* To update ALL global packages run `npm update -g`
+## Uninstalling global packages 
+* briefly run `npm uninstall -g <package-name>`
+
