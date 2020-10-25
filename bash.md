@@ -1,10 +1,19 @@
 # <center>Cheat sheet for bash</center>
 
 
-## File redirection
-
-
-
+## Redirections
+### Redirecting input
+* generally is `[n] < word`. 
+* Example 
+```console
+$cat < test.txt
+Just a simple file
+Nothing unusual.
+```
+### Redirecting output
+* `[n] > word`
+## Appending redirected output
+* `[n] >> word`
 ## Find command
 
 ### `-type` parameter
