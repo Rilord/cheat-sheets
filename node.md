@@ -2,9 +2,14 @@
 # Node Cheat sheets
 
 ### Command line arguments
-* `-v, --version` shows version 
-* `-c, --check` syntax check the script without further execution 
-* `-e, --eval` evaluate the command line argument followed by this parameter. 
+* `-v, --version` shows version.
+Example: 
+```bash
+node -v 
+v14.13.0
+```
+* `-c, --check` syntax check the script without further execution.
+* `-e, --eval "script"` evaluate the command line argument followed by this parameter. 
 Example: 
 ```bash
 $ node -e 'var x = 6; console.log(x);'
@@ -21,4 +26,13 @@ undefined
 > x
 6
 ```
-* `-p, --print `
+* `-p, --print "script"` simmilar to `-e`, but with result print.
+* `--prof` generate V8 profiler output.
+Example: 
+```bash
+$ cat index.js
+var a = new Int32Array([4945, -63456]);
+console.log(a);
+$ node --prof index.js
+ll 
+isolate-a-b-v8.log
