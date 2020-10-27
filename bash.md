@@ -78,11 +78,13 @@ then
   commandn
 fi
 ```
-## Test condifions and operators
-* General rule
-```bash
-```
-* Using in if statements
+## CONDITIONAL EXPRESSIONS
+> :warning: You should pay attetntion to spaces between lexemas. For example `[-a $FILE]` won't work.  
+
+C.E. are widely used in if statements, for and while loops, where ommited by `[]` and `[[]]`
+* Files conditional operators
+  * `[-a file]` - if file exists
+  * `[-b file]`
 ## FOR loops
 * General rule
 ```bash
