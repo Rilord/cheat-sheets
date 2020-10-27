@@ -1,5 +1,5 @@
 # <center>Cheat sheet for bash</center>
-
+- Most of this information may be found with `man bash`.
 
 ## Redirections
 ### Redirecting input
@@ -30,9 +30,61 @@ Nothing unusual.
 
 
 ## IF statements
-
+* General rule for `if` statement
+```bash
+if [CONDITION]
+then
+  command1
+  command2
+  ...
+  commandn
+fi
+```
+* General rule for `if..else` statement
+```bash
+if [CONDITION]
+then
+  ...
+else
+  ...
+fi
+```
+* General rule for `if..elif..else` statement
+```bash
+if [CONDITION1]
+then
+  ...
+elif [CONDITION2]
+then
+  ... 
+else
+  ...
+fi
+```
+* Nested `if` statements
+```bash
+if [CONDITION]
+then
+  if [CONDITION]
+  then
+    command1
+    command2
+    ...
+    commandn
+  fi
+  command1
+  command2
+  ...
+  commandn
+fi
+```
+## Test condifions and operators
+* General rule
+```bash
+```
+* Using in if statements
 ## FOR loops
-* General usage
+* General rule
 ```bash
 for VARIABLE in 1 2 3 4 5 .. N
 do
@@ -65,4 +117,30 @@ done
 for (( ; ; ))
 ...
 ```
+* Examples
+Iterate over files in c
+```bash
+for f in $(ls -p | grep -v /) # iterate over files ONLY
+do
+...
+done 
+```
 ## WHILE loops
+* General rule
+```bash
+while [CONDITION]
+do
+	command1
+	command2
+ ...
+	commandn
+done
+```
+## Parameter expansion
+* `${parameter}` - substitute with parameter value. 
+* `${parameter:-word}` - Use Default Value. So if `parameter` is unset or null will be replaced with `word `in THIS statement.
+* `${parameter:=word}` - Assign Default Value. The `word` will be assigned to `parameter` globally. 
+* `${parameter:offset[:length]}` - Returns offseted value with specific length (if defined).
+* `${}`
+## Substitions (commands, arithmetics and processes)
+### General rule: `$(command)` or ``command``
