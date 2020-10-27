@@ -31,3 +31,38 @@ Nothing unusual.
 
 ## IF statements
 
+## FOR loops
+* General usage
+```bash
+for VARIABLE in 1 2 3 4 5 .. N
+do
+	command1
+	command2
+ ...
+	commandn
+done
+```
+* Using ranges. You also can use seq command(`seq start end step`)
+```bash
+# Simple range with step = 1 
+for i in {1..5}
+do
+   printf "this is %d loop\n" $i
+done
+# With manually defined step
+for i in {0..10..2} #From 0 to 12 with step 2.
+do 
+     printf "this is %d loop\n" $i 
+done
+```
+* Ranges, but more programming style.
+```bash
+for (( c=1; c<=5; c++ ))
+do  
+   printf "this is %d loop\n" $i
+done
+# Infinite loop
+for (( ; ; ))
+...
+```
+## WHILE loops
