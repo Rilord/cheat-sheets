@@ -79,7 +79,7 @@ fi
 > :warning: You should pay attetntion to spaces between lexemas. For example `[-a $FILE]` won't work.  
 
 C.E. are widely used in if statements, for and while loops, where ommited by `[]` and `[[]]`
-* Files conditional operators
+* Single-file conditional operators
   * `[ -a file ]` - if file exists.
   * `[ -b file ]` - if file exists and is a block special file.
   * `[ -c file ]` - if file exists and is a character special file.
@@ -90,6 +90,29 @@ C.E. are widely used in if statements, for and while loops, where ommited by `[]
   * `[ -s file ]` - if file exists and it's size greater than zero.
   * `[ -w file ]` - if file exists and it is writable.
   * `[ -x file ]` - if file exists and it is executable.
+  
+* Multiple-files conditional operators
+  * `[ file1 -nt file2 ]` - file1 Newer Then file2.
+  * `[ file1 -ot file2 ]` - older than.
+  
+* Single-string conditional operators
+  * `[ -z string ]` - if string is zero.
+  * `[ -n string ]` - if string is non-zero.
+  
+* Multiple-string conditional operators
+  * `[ string1 == string2 ]` - if strings are equal.
+  * `[ string1 != string2 ]` - if strings are not equal.
+  * `[ string1 < string2 ]` - if string1 sorts before string2 lexicographically.
+  * `[ string1 > string2 ]` - if string1 sorts after string2 lexicographically.
+  
+* Arithmetic conditional operators
+  * `[ arg1 -eq arg2 ]` - arg1 is equal to arg2.
+  * `[ arg1 -ne arg2 ]` - arg1 is not equal to arg2.
+  * `[ arg1 -lt arg2 ]` - arg1 is less then arg2.
+  * `[ arg1 -le arg2 ]` - arg1 is less or equal to arg2.
+  * `[ arg1 -gt arg2 ]` - arg1 is greater then arg2.
+  * `[ arg1 -ge arg2 ]` - arg1 is greater or equal to arg2.
+    
 ## FOR LOOPS
 * General rule
 ```bash
