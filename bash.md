@@ -14,7 +14,7 @@ Nothing unusual.
 * `[n] > word`
 ## Appending redirected output
 * `[n] >> word`
-## FIND command
+## FIND COMMAND
 
 ### `-type` parameter
  * `f` search all files 
@@ -26,10 +26,7 @@ Nothing unusual.
 ### `-path` parameter (`-ipath` for case-insensitive)
 * Works as `-name`, except doesn't only apply the pattern to filenames.
 
-### Examples
-
-
-## IF statements
+## IF STATEMENTS
 * General rule for `if` statement
 ```bash
 if [CONDITION]
@@ -83,9 +80,17 @@ fi
 
 C.E. are widely used in if statements, for and while loops, where ommited by `[]` and `[[]]`
 * Files conditional operators
-  * `[-a file]` - if file exists
-  * `[-b file]`
-## FOR loops
+  * `[ -a file ]` - if file exists.
+  * `[ -b file ]` - if file exists and is a block special file.
+  * `[ -c file ]` - if file exists and is a character special file.
+  * `[ -d file ]` - if file exists and is a directory.
+  * `[ -e file ]` - if file exists.
+  * `[ -h file ]` - if file exists and is a symbolic link.
+  * `[ -r file ]` - if file exists and readable.
+  * `[ -s file ]` - if file exists and it's size greater than zero.
+  * `[ -w file ]` - if file exists and it is writable.
+  * `[ -x file ]` - if file exists and it is executable.
+## FOR LOOPS
 * General rule
 ```bash
 for VARIABLE in 1 2 3 4 5 .. N
@@ -127,7 +132,7 @@ do
 ...
 done 
 ```
-## WHILE loops
+## WHILE LOOPS
 * General rule
 ```bash
 while [CONDITION]
@@ -138,11 +143,11 @@ do
 	commandn
 done
 ```
-## Parameter expansion
+## PARAMETER EXPANSION
 * `${parameter}` - substitute with parameter value. 
 * `${parameter:-word}` - Use Default Value. So if `parameter` is unset or null will be replaced with `word `in THIS statement.
 * `${parameter:=word}` - Assign Default Value. The `word` will be assigned to `parameter` globally. 
 * `${parameter:offset[:length]}` - Returns offseted value with specific length (if defined).
 * `${}`
-## Substitions (commands, arithmetics and processes)
+## SUBSTITUTIONS
 * Rule for commands: `$(command)` or `command`(with backticks)
