@@ -1,7 +1,7 @@
 # <center>Cheat sheet for bash</center>
 - Most of this information may be found with `man bash`.
 
-## Redirections
+## REDIRECTIONS
 ### Redirecting input
 * generally is `[n] < word`. 
 * Example 
@@ -14,7 +14,7 @@ Nothing unusual.
 * `[n] > word`
 ## Appending redirected output
 * `[n] >> word`
-## Find command
+## FIND command
 
 ### `-type` parameter
  * `f` search all files 
@@ -143,4 +143,4 @@ done
 * `${parameter:offset[:length]}` - Returns offseted value with specific length (if defined).
 * `${}`
 ## Substitions (commands, arithmetics and processes)
-### General rule: `$(command)` or ``command``
+* Rule for commands: `$(command)` or `command`(with backticks)
